@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <title>羽毛球比賽計分系統</title>
+  <meta name="description" content="跨平台羽毛球計分與排播系統">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css" />
+  <!-- Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+  <link rel="manifest" href="manifest.json" />
+  <meta name="theme-color" content="#121826" />
+  <style>
+    /* Critical inline styles before CSS loads */
+    body { background: #121826; color: #fff; margin:0; font-family: 'Inter', sans-serif;}
+  </style>
+</head>
+<body>
+  <div id="app">
+    <!-- Sidebar Navigation -->
+    <nav id="sidebar" class="glass-panel">
+      <div class="logo">
+        <i class="ri-shuttlecock-fill"></i>
+        <span>Badminton Pro</span>
+      </div>
+      <ul class="nav-links">
+        <li><a href="#registration" class="active"><i class="ri-team-line"></i> 報名分組</a></li>
+        <li><a href="#schedule"><i class="ri-calendar-event-line"></i> 預賽賽程表</a></li>
+        <li><a href="#bracket"><i class="ri-table-line"></i> 循環籤表</a></li>
+        <li><a href="#live"><i class="ri-tv-line"></i> 即時分數</a></li>
+        <li><a href="#umpire"><i class="ri-edit-box-line"></i> 裁判計分板</a></li>
+      </ul>
+    </nav>
+
+    <!-- Main Content Area -->
+    <main id="main-content">
+      <!-- Pages will be rendered here dynamically -->
+      <div class="loader">
+        <div class="spinner"></div>
+      </div>
+    </main>
+  </div>
+
+  <script src="js/api.js"></script>
+  <script src="js/pages/registration.js"></script>
+  <script src="js/pages/schedule.js"></script>
+  <script src="js/pages/bracket.js"></script>
+  <script src="js/pages/live-score.js"></script>
+  <script src="js/pages/umpire.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
